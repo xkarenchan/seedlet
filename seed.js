@@ -1,4 +1,10 @@
 if (Meteor.isClient) {
+  Template.body.helpers({
+    mentors: function() {
+      return Meteor.users.find();
+    }
+  });
+
   Template.body.events({
     'submit .register': function(event) {
         event.preventDefault();
@@ -20,8 +26,8 @@ if (Meteor.isClient) {
               firstName: firstNameVar,
               lastName: lastNameVar,
               field: fieldVar,
-              isMentee: menteeVar,
-              isMentor: mentorVar
+              isMentee: menteeVar === "on",
+              isMentor: mentorVar === "on"
             }
         });
         event.target.firstName.value = "";
