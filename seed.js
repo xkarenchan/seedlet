@@ -6,6 +6,13 @@ if (Meteor.isClient) {
   });
 
   Template.body.events({
+    'submit .form-signin': function(event) {
+        event.preventDefault();
+        var emailVar = event.target.signinEmail.value;
+        var passwordVar = event.target.signinPassword.value;
+        Meteor.loginWithPassword(emailVar, passwordVar);
+    },
+
     'submit .register': function(event) {
         event.preventDefault();
         var firstNameVar = event.target.firstName.value;

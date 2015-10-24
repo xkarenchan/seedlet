@@ -90,13 +90,13 @@
                <form class="form-signin">
                   <h2 class="form-signin-heading">sign in <span class="glyphicon glyphicon-leaf"></span></h2>
                     <label for="inputEmail" class="sr-only">Email address</label>
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                    <input type="email" name="signinEmail" class="form-control" placeholder="Email address" required autofocus>
                     <label for="inputPassword" class="sr-only">Password</label>
-                  <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
-                  <div class="checkbox">
+                    <input type="password" name="signinPassword" class="form-control" placeholder="Password" required>
+                    <div class="checkbox">
                       <label> <input type="checkbox" value="remember-me"> Remember me </label>
-                  </div>
-               <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+                    </div>
+               <input class="btn btn-lg btn-primary btn-block" type="submit" value="Sign in">
              </form>
             </div>
           </div>
@@ -205,12 +205,7 @@
 
       <!-- /END THE FEATURETTES -->
       {{> register}}
-      <ul>
-	      {{#each mentors}}
-	      	{{> mentor}}
-	      {{/each}}
-	   </ul>
-
+      
       <!-- FOOTER -->
       <footer>
         <p class="pull-right"><a href="#">Back to top</a></p>
