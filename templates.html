@@ -1,7 +1,10 @@
 <template name="register">
     <form>
-        <input type="email" name="registerEmail">
-        <input type="password" name="registerPassword">
+        <label>First Name</label> <input type="text" name="firstName">
+        <label>Last Name</label> <input type="text" name="lastName"><br/>
+        <label>Email</label> <input type="email" name="registerEmail">
+        <label>Password</label> <input type="password" name="registerPassword">
+        <label>Field</label> <input type="text" name="field"><br/>
         <input type="submit" value="Register">
     </form>
 </template>
@@ -14,7 +17,7 @@
     </form>
 </template>
 
-<template name="logout">
+<template name="dashboard">
     <p><a href="#" class="logout">Logout</a></p>
 </template>
 
