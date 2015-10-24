@@ -1,13 +1,43 @@
 if (Meteor.isClient) {
-  Template.register.events({
-    'submit form': function(event) {
+  Template.body.helpers({
+    mentors: function() {
+      return Meteor.users.find();
+    }
+  });
+
+  Template.body.events({
+    'submit .register': function(event) {
         event.preventDefault();
+        var firstNameVar = event.target.firstName.value;
+        var lastNameVar = event.target.lastName.value;
+        var fieldVar = event.target.field.value;
         var emailVar = event.target.registerEmail.value;
         var passwordVar = event.target.registerPassword.value;
+        var passwordVar2 = event.target.registerPassword2.value;
+        var menteeVar = event.target.isMentee.value;
+        var mentorVar = event.target.isMentor.value;
+        if (passwordVar != passwordVar2) {
+            alert("Passwords don't match.");
+        }
         Accounts.createUser({
             email: emailVar,
-            password: passwordVar
+            password: passwordVar,
+            profile: {
+              firstName: firstNameVar,
+              lastName: lastNameVar,
+              field: fieldVar,
+              isMentee: menteeVar === "on",
+              isMentor: mentorVar === "on"
+            }
         });
+        event.target.firstName.value = "";
+        event.target.lastName.value = "";
+        event.target.field.value = "";
+        event.target.registerEmail.value = "";
+        event.target.registerPassword.value = "";
+        event.target.registerPassword2.value = "";
+        event.target.isMentee.value = "";
+        event.target.isMentor.value = "";
     }
   });
 

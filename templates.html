@@ -1,12 +1,19 @@
 <template name="register">
-    <form>
+    <form class="register">
         <label>First Name</label> <input type="text" name="firstName">
-        <label>Last Name</label> <input type="text" name="lastName"><br/>
-        <label>Email</label> <input type="email" name="registerEmail">
+        <label>Last Name</label> <input type="text" name="lastName">
+        <label>Email</label> <input type="email" name="registerEmail"><br/>
+        <label>I am interested in...</label> <input type="text" name="field"><br/>
         <label>Password</label> <input type="password" name="registerPassword">
-        <label>Field</label> <input type="text" name="field"><br/>
+        <label>Confirm Password</label> <input type="password" name="registerPassword2"><br/>
+        <label>I need a mentor</label> <input type="checkbox" name="isMentee"><br/>
+        <label>I want to be a mentor</label> <input type="checkbox" name="isMentor"><br/>
         <input type="submit" value="Register">
     </form>
+</template>
+
+<template name="mentor">
+    <li>{{profile.firstName}} {{profile.lastName}}: {{profile.field}}</li>
 </template>
 
 <template name="login">
