@@ -1,12 +1,63 @@
-/* GLOBAL STYLES
+
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
 body {
-  padding-bottom: 40px;
+  padding-bottom: 400px;
   color: #5a5a5a;
 }
 
+/*Sign in stuff*/
+
+.form-signin {
+  color: #fff;
+  font: ;
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading{
+  algin: center;
+}
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+/* end of Signin stuff*/
+
+/* Custom default button */
+.btn-default,
+.btn-default:hover,
+.btn-default:focus {
+  color: #333;
+  text-shadow: none; /* Prevent inheritence from `body` */
+  background-color: #fff;
+  border: 1px solid #fff;
+}
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -18,17 +69,6 @@ body {
   right: 0;
   left: 0;
   z-index: 20;
-}
-
-.form-signin input[type="email"] {
-  margin-bottom: -1px;
-  border-bottom-right-radius: 0;
-  border-bottom-left-radius: 0;
-}
-.form-signin input[type="password"] {
-  margin-bottom: 10px;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
 }
 
 /* Flip around the padding for proper display in narrow viewports */
@@ -63,6 +103,7 @@ body {
   height: 500px;
   background-color: #777;
 }
+
 .carousel-inner > .item > img {
   position: absolute;
   top: 0;
@@ -76,14 +117,14 @@ body {
 -------------------------------------------------- */
 
 /* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
+.marketing .col-lg-3 {
   margin-bottom: 20px;
   text-align: center;
 }
 .marketing h2 {
   font-weight: normal;
 }
-.marketing .col-lg-4 p {
+.marketing .col-lg-3 p {
   margin-right: 10px;
   margin-left: 10px;
 }
